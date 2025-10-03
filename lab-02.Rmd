@@ -12,7 +12,6 @@ library(tidyverse)
 library(readxl)
 ```
 
-
 ## Load & join data sets
 
 ```{r load-data, message = FALSE}
@@ -21,6 +20,7 @@ data1 <- read_csv("data/mismanaged-plastic-waste-per-capita.csv")
 plastic_data_all <- data1
 plastic_data_all %>% head(n = 10)
 # Member 4 (pair 2) write code to load File 2 data here:
+data2<- read_csv2("data/per-capita-ocean-plastic-waste.txt")
 
 
 
@@ -34,8 +34,6 @@ plastic_data_all %>% head(n = 10)
 
 ```
 
-
-
 ```{r join-data, message = FALSE}
 # Member 2 (pair 1) write code to create object 'plastic_data_all':
 
@@ -43,9 +41,6 @@ plastic_data_all %>% head(n = 10)
 
 
 # Member 4 (pair 2) write code to join your data to 'plastic_data_all':
-
-read_csv2("data/per-capita-ocean-plasic-waste.txt")
-
 plastic_data_all <- data2 %>%
   select(-name) %>%
   left_join(plastic_data_all, by = "code")
@@ -62,15 +57,12 @@ plastic_data_all <- data2 %>%
 
 ```
 
-
 ```{r print-data, message = FALSE}
 # Member 2 (pair 1) adds code here to view the first 10 rows of 'plastic_data_all'
 
 
 
 ```
-
-
 
 ## Exercises
 
@@ -83,8 +75,6 @@ plastic_data_all <- data2 %>%
 
 ```
 
-
-
 ### Ex 2.
 
 ```{r Ex2, message = FALSE}
@@ -94,7 +84,6 @@ plastic_data_all <- data2 %>%
 
 ```
 
-
 ### Ex 3.
 
 ```{r Ex3, message = FALSE}
@@ -103,7 +92,6 @@ plastic_data_all <- data2 %>%
 
 
 ```
-
 
 ### Ex 4.
 
