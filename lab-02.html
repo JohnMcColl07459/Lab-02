@@ -388,7 +388,10 @@ data2&lt;- read_csv2(&quot;data/per-capita-ocean-plastic-waste.txt&quot;)
 
 
 # Member 1 (pair 1) write code to load File 3 data here:
-
+data3 &lt;- read_tsv(&quot;data/UN_country_population.tsv&quot;)
+plastic_data_all &lt;- data3 %&gt;%
+  select(-name) %&gt;%
+  right_join(plastic_data_all, by = &quot;code&quot;)
 
 
 # Member 3 (pair 2) write code to load File 4 data here:</code></pre>
